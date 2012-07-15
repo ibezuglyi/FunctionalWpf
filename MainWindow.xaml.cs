@@ -47,7 +47,7 @@ namespace FunctionalWpf
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
-            var animationCollection = new LambdaDuobleAniamtionCollection(Count,
+            var animationCollection = new LambdaDoubleAniamtionCollection(Count,
                 x => 500 + Math.Pow(x, 1.2) * Math.Sin(x / 4.0 * Math.PI),
                 x => x * 10,
                 i => new Duration(TimeSpan.FromMilliseconds(i*10%2000)),
@@ -95,9 +95,9 @@ namespace FunctionalWpf
             return ValueGenerator(base.GetCurrentValueCore(defaultOriginValue, defaultDestinationValue, animationClock));
         }
     }
-    public class LambdaDuobleAniamtionCollection : Collection<LambdaDoubleAnimation>
+    public class LambdaDoubleAniamtionCollection : Collection<LambdaDoubleAnimation>
     {
-        public LambdaDuobleAniamtionCollection(int count,
+        public LambdaDoubleAniamtionCollection(int count,
             Func<int, double> from,
             Func<int, double> to,
             Func<int, Duration> duration,
