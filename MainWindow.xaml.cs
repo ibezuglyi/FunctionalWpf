@@ -53,6 +53,7 @@ namespace FunctionalWpf
                 i => new Duration(TimeSpan.FromMilliseconds(i*10%2000)),
                 i => j => 100 / j);
             animationCollection.BeginAnimation(circles.Cast<UIElement>().ToArray(), Canvas.LeftProperty);
+            
         }
     }
     public class LambdaCollection<T> : Collection<T> where T : DependencyObject, new()
